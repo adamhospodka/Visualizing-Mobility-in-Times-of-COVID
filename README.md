@@ -1,4 +1,4 @@
-# Visualizing-Mobility-in-Times-of-COVID
+# Visualizing Mobility in Times of COVID
 
 Web-based application built using JavaScript and [D3.js](https://d3js.org) that visualizes some of the open COVID-19 mobility and sickness data collected by Google and the European Union. 
 
