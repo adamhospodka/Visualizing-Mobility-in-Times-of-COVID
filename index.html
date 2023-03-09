@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>COVID-19 Mobility Data Exploration</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦠</text></svg>">
+
+    <meta name="author" content="Adam Hospodka">
+    <meta name="institution" content="Masaryk University">
+    <meta name="institution" content="Technische Universität Wien">
+    <meta name="keywords" content="COVID-19, covid, mobility data, exploration, visualization">
+    
+</head>
+
+<body>
+    <h1 class="doc-name"> 🦠 COVID-19 Mobility Data Exploration </h1>
+    <div class="buttons">
+        <!-- <select class="input-country"> -->
+        <div class="selectedCountryRow">
+            <div class="selectedCountryText"> Selected country:&nbsp; </div>
+            <div class="country-and-flag">
+                <div class="flag"></div>
+                <div class="selectedCountry" style="font-size: small"> ⬇click on map </div>
+                
+            </div>
+            
+        </div>
+        </select>
+        <select class="input-year">
+        </select>
+    </div>
+
+    </br>
+
+
+    <div class="chart-area">
+        <div class="mapChartContainer">
+            <svg class="mapChart" width="1200" height="600"></svg>
+        </div>
+
+        <div class="mainColumns">
+
+            <div class="firstMainColumn">
+
+                <h3 class="chart-heading"> 🗓 &nbsp; Slider </h3>
+                <p class="description" >Drag the handle to select the date</p>
+                <div class="slider"></div>
+                <h3 class="chart-heading"> 🦠 &nbsp;Covid Cases </h3>
+                <p class="description">Number of infected poeple per million inhabitant</p>
+                <div class="firstRow">
+                    <div class="lineChart"></div>
+                    <!--  <div class="secondRowLeft">
+                    </div>
+                    <div class="secondRowRight">
+                    </div> -->
+                </div>
+                <h3 class="chart-heading"> 🚧 &nbsp; Restriction count </h3>
+                <p class="description" >Descrition of chart in 2 sentences</p>
+                <div class="firstRow">
+                    <!-- <div class="firstRowLeft"> -->
+                    <div class="restrictionNumbers">
+                        <div class="boxes"></div>
+                        <div class="labels"></div>
+                        <!-- </div> -->
+                    </div>
+                    <!--  <div class="firstRowRight"> -->
+                    <!-- </div> -->
+                </div>
+                <h3 class="chart-heading"> 😷 &nbsp; Restriction categories </h3>
+                <p class="description" >Descrition of chart in 2 sentences</p>
+                <div class="restrictionCategoriesList"></div>
+                <div class="restrictionMeasuresList"></div>
+
+            </div>
+
+
+            <div class="secondMainColumn">
+                <h3 class="chart-heading" id="activity"> 🏃‍♂️ &nbsp; Activity in country </h3>
+                <p class="description" id="activity" >Descrition of chart in 2 sentencestences</p>
+                <div class="firstRowSecondMainColumn"></div>
+                <div class="secondRowSecondMainColumn">
+                    <div class="iconChart">
+                        <svg class="legend" width="300" height="150"></svg>
+                    </div>
+                </div>
+                <h3 class="chart-heading" id="percentage-sick"> 🤒 &nbsp; Percetage sick </h3>
+                <p class="description" id="percentage-sick">Descrition of chart in 2 sentences</p>
+                <div class="thirdRowSecondMainColumn">
+                    <div class="scatterPlot"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="script.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<script type="text/javascript" src="./functions/image_code.js">
+    import { getSvgImageCode } from './functions/image_code.js';
+</script>
+
+<script type="text/javascript" src="./functions/addTitlesForIcons.js">
+    import { addTitlesForIcons } from './functions/addTitlesForIcons.js';
+</script>
+
+<script type="text/javascript" src="./functions/restrictionNamesMapping.js">
+    import { getRestrictionNamesMapping } from './functions/restrictionNamesMapping.js';
+</script>
+
+<script type="text/javascript" src="./functions/countryCodeNamesMapping.js">
+    import { getCountryCodeNamesMapping } from './functions/countryCodeNamesMapping.js';
+</script>
+
+<script type="text/javascript" src="./functions/countryFlags.js">
+    import { getCountryFlags } from './functions/countryFlags.js';
+</script>
